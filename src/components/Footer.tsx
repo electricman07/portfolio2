@@ -14,7 +14,7 @@ export default function Footer() {
           href="https://x.com/tan_stack"
           target="_blank"
           rel="noreferrer"
-          className="rounded-xl p-2 text-(--accent-secondary) transition hover:bg-(--accent-hover) hover:text-(--text-secondary)"
+          className="rounded-xl p-2 text-(--accent-secondary) transition hover:bg-(--accent-secondary) hover:text-(--text-secondary)"
         >
           <span className="sr-only">Follow TanStack on X</span>
           <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
@@ -28,7 +28,7 @@ export default function Footer() {
           href="https://github.com/TanStack"
           target="_blank"
           rel="noreferrer"
-          className="rounded-xl p-2 text-(--accent-secondary) transition hover:bg-(--accent-hover) hover:text-(--text-secondary)"
+          className="rounded-xl p-2 text-(--accent-secondary) transition hover:bg-(--accent-secondary) hover:text-(--text-secondary)"
         >
           <span className="sr-only">Go to TanStack GitHub</span>
           <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
