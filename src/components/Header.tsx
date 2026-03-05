@@ -3,14 +3,14 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--header-bg)] px-4 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 border-b border-[var(--bg-primary)] bg-[var(--bg-primary)] px-4 backdrop-blur-lg">
       <nav className="page-wrap flex flex-wrap items-center gap-x-3 gap-y-2 py-3 sm:py-4">
         <h2 className="m-0 flex-shrink-0 text-base font-semibold tracking-tight">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-3 py-1.5 text-sm text-[var(--sea-ink)] no-underline shadow-[0_8px_24px_rgba(30,90,72,0.08)] sm:px-4 sm:py-2"
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--accent-secondary)] bg-[var(--accent-secondary)] px-3 py-1.5 text-sm text-[var(--text-primary)] no-underline shadow-[0_8px_24px_rgba(30,90,72,0.08)] sm:px-4 sm:py-2"
           >
-            <img src="../../public/images/Avatar50.png" alt="logo" />
+            <img src="/images/Avatar50.png" alt="logo" />
             Glen Popowich
           </Link>
         </h2>
@@ -20,7 +20,7 @@ export default function Header() {
             href="https://x.com/tan_stack"
             target="_blank"
             rel="noreferrer"
-            className="hidden rounded-xl p-2 text-[var(--sea-ink-soft)] transition hover:bg-[var(--link-bg-hover)] hover:text-[var(--sea-ink)] sm:block"
+            className="hidden rounded-xl p-2 text-[var(--accent-secondary)] transition hover:bg-[var(--accent-hover)] hover:text-[var(--text-secondary)] sm:block"
           >
             <span className="sr-only">Follow TanStack on X</span>
             <svg viewBox="0 0 16 16" aria-hidden="true" width="24" height="24">
@@ -34,7 +34,7 @@ export default function Header() {
             href="https://github.com/TanStack"
             target="_blank"
             rel="noreferrer"
-            className="hidden rounded-xl p-2 text-[var(--sea-ink-soft)] transition hover:bg-[var(--link-bg-hover)] hover:text-[var(--sea-ink)] sm:block"
+            className="hidden rounded-xl p-2 text-[var(--accent-secondary)] transition hover:bg-[var(--accent-hover)] hover:text-[var(--text-secondary)] sm:block"
           >
             <span className="sr-only">Go to TanStack GitHub</span>
             <svg viewBox="0 0 16 16" aria-hidden="true" width="24" height="24">
@@ -47,8 +47,15 @@ export default function Header() {
 
           <ThemeToggle />
         </div>
+        <div className="nav-wrapper">
+          <div className="menu-icon">
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </div>
+        </div>
 
-        <div className="order-3 flex w-full flex-wrap items-center gap-x-4 gap-y-1 pb-1 text-sm font-semibold sm:order-2 sm:w-auto sm:flex-nowrap sm:pb-0">
+        <div className="nav-links order-3 flex w-full flex-wrap items-center gap-x-4 gap-y-1 pb-1 text-sm font-semibold sm:order-2 sm:w-auto sm:flex-nowrap sm:pb-0">
           <Link
             to="/"
             className="nav-link"

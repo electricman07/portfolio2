@@ -11,11 +11,11 @@ function App() {
       >
         <div className="image-container w-[50%} flex justify-center items-start">
           <div className="image-src h-50 w-50 md:h-75 md:w-75 rounded-[50%] mr-10">
-            <img src="" alt="" />
+            <img src="null" alt="" />
           </div>
         </div>
 
-        <div className="title-container flex flex-col justify-center items-center w-[80%] h-[15%] lg:w-[50%] lg:h-[25%] rounded-xl gap-10 text-[rgb(163, 194, 196)] ">
+        <div className="title-container flex flex-col justify-center items-center w-[80%] h-[15%] lg:w-[50%] lg:h-[25%] rounded-xl gap-10 text-(--text-primary) ">
           <div className="title flex justify-center">
             <span className="title-span mr-2.5">I am </span>
             <h2 className="main-title text-2xl md:text-3xl lg:text-5xl m-0 italic tracking-wide font-[grandstander]">
