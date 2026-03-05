@@ -1,5 +1,5 @@
-import { Link } from '@tanstack/react-router'
-import ThemeToggle from './ThemeToggle'
+import { Link } from "@tanstack/react-router";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
@@ -11,7 +11,7 @@ export default function Header() {
             className="inline-flex items-center gap-2 rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-3 py-1.5 text-sm text-[var(--sea-ink)] no-underline shadow-[0_8px_24px_rgba(30,90,72,0.08)] sm:px-4 sm:py-2"
           >
             <span className="h-2 w-2 rounded-full bg-[linear-gradient(90deg,#56c6be,#7ed3bf)]" />
-            TanStack Start
+            Glen Popowich
           </Link>
         </h2>
 
@@ -52,27 +52,61 @@ export default function Header() {
           <Link
             to="/"
             className="nav-link"
-            activeProps={{ className: 'nav-link is-active' }}
+            activeProps={{ className: "nav-link is-active" }}
           >
             Home
           </Link>
           <Link
+            to="/services"
+            className="nav-link"
+            activeProps={{ className: "nav-link is-active" }}
+          >
+            Services
+          </Link>
+          <Link
             to="/about"
             className="nav-link"
-            activeProps={{ className: 'nav-link is-active' }}
+            activeProps={{ className: "nav-link is-active" }}
           >
             About
           </Link>
-          <a
-            href="https://tanstack.com/start/latest/docs/framework/react/overview"
+          <Link
+            to="/stack"
             className="nav-link"
-            target="_blank"
-            rel="noreferrer"
+            activeProps={{ className: "nav-link is-active" }}
           >
-            Docs
-          </a>
+            Tech Stack
+          </Link>
+          <Link
+            to="/faq"
+            className="nav-link"
+            activeProps={{ className: "nav-link is-active" }}
+          >
+            FAQ
+          </Link>
+          <Link
+            to="/portfolio"
+            className="nav-link"
+            activeProps={{ className: "nav-link is-active" }}
+          >
+            Portfolio
+          </Link>
+          <Link
+            to="/blog"
+            className="nav-link"
+            activeProps={{ className: "nav-link is-active" }}
+          >
+            Blog
+          </Link>
+          <Link
+            to="/contact"
+            className="nav-link"
+            activeProps={{ className: "nav-link is-active" }}
+          >
+            Contact
+          </Link>
         </div>
       </nav>
     </header>
-  )
+  );
 }
