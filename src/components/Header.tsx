@@ -1,7 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import ThemeToggle from "./ThemeToggle";
+import { useState } from "react";
+// import "../lib/menu";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-(--bg-primary) bg-(--bg-primary) px-4 backdrop-blur-lg">
       <nav className="page-wrap flex flex-wrap items-center gap-x-3 gap-y-2 py-3 sm:py-4">
@@ -47,71 +50,72 @@ export default function Header() {
 
           <ThemeToggle />
         </div>
-        <div className="nav-wrapper">
-          <div className="menu-icon">
+        <div className="nav-wrapper" onClick={() => setIsOpen(!isOpen)}>
+          <div className={isOpen ? "menu-icon active" : "menu-icon"}>
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
           </div>
         </div>
-
-        <div className="nav-links order-3 flex w-full flex-wrap items-center gap-x-4 gap-y-1 pb-1 text-sm font-semibold sm:order-2 sm:w-auto sm:flex-nowrap sm:pb-0">
-          <Link
-            to="/"
-            className="nav-link"
-            activeProps={{ className: "nav-link is-active" }}
-          >
-            Home
-          </Link>
-          <Link
-            to="/services"
-            className="nav-link"
-            activeProps={{ className: "nav-link is-active" }}
-          >
-            Services
-          </Link>
-          <Link
-            to="/about"
-            className="nav-link"
-            activeProps={{ className: "nav-link is-active" }}
-          >
-            About
-          </Link>
-          <Link
-            to="/stack"
-            className="nav-link"
-            activeProps={{ className: "nav-link is-active" }}
-          >
-            Tech Stack
-          </Link>
-          <Link
-            to="/faq"
-            className="nav-link"
-            activeProps={{ className: "nav-link is-active" }}
-          >
-            FAQ
-          </Link>
-          <Link
-            to="/portfolio"
-            className="nav-link"
-            activeProps={{ className: "nav-link is-active" }}
-          >
-            Portfolio
-          </Link>
-          <Link
-            to="/blog"
-            className="nav-link"
-            activeProps={{ className: "nav-link is-active" }}
-          >
-            Blog
-          </Link>
-          <Link
-            to="/contact"
-            className="nav-link"
-            activeProps={{ className: "nav-link is-active" }}
-          >
-            Contact
-          </Link>
+        <div className={isOpen ? "navLinks active" : "nav-links"}>
+          <div className="order-3 flex w-full flex-wrap items-center gap-x-4 gap-y-1 pb-1 text-sm font-semibold sm:order-2 sm:w-auto sm:flex-nowrap sm:pb-0">
+            <Link
+              to="/"
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              Home
+            </Link>
+            <Link
+              to="/services"
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              Services
+            </Link>
+            <Link
+              to="/about"
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              About
+            </Link>
+            <Link
+              to="/stack"
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              Tech Stack
+            </Link>
+            <Link
+              to="/faq"
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              FAQ
+            </Link>
+            <Link
+              to="/portfolio"
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              Portfolio
+            </Link>
+            <Link
+              to="/blog"
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              Blog
+            </Link>
+            <Link
+              to="/contact"
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              Contact
+            </Link>
+          </div>
         </div>
       </nav>
     </header>
