@@ -19,6 +19,7 @@
   --accent-secondary: #c89b6b;
   --accent-hover: #1e5a52;
   --bg-primary: #aec2ba;
+  --bg-background: #f5f5f5;
 }
 
 :root[data-theme="dark"] {
@@ -255,8 +256,8 @@ a {
 }
 .menu-icon {
   position: fixed;
-  top: 15px;
-  right: 15px;
+  top: 25px;
+  right: 25px;
   width: 2rem;
   height: 2rem;
   display: flex;
@@ -288,16 +289,6 @@ a {
   transform: translateY(-0.75rem) rotate(45deg);
 }
 
-.nav-wrapper {
-  height: 60px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* background: var(--background); */
-  /* width: 100%; */
-  z-index: 10;
-}
-
 nav.active {
   transform: translateX(0);
 }
@@ -323,4 +314,21 @@ nav.active {
   .nav-links.active {
     right: 0;
   }
+}
+
+/* Sections  */
+.section-title {
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--bg-primary);
+}
+
+/* Services */
+.services-container {
+  background: var(--bg-background);
+  box-shadow: var(--box-shadow);
+}
+
+.service-section {
+  background: var(--bg-primary);
+  box-shadow: var(--box-shadow);
 }
