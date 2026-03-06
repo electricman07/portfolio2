@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
@@ -24,11 +24,11 @@ function RouteComponent() {
       className="section-1 sections flex flex-col items-center mt-40"
       id="services"
     >
-      <h2 className="services-title section-title mt-2.5 p-2.5 w-auto text-center rounded-xl  mt-5 text-5xl ">
+      <h2 className="services-title section-title p-2.5 w-auto text-center rounded-xl  mt-5 text-5xl ">
         Services
       </h2>
-      <div className="services-container w-full h-[60vh] flex justify-evenly rounded-xl mt-40">
-        <div className="service1 service-section h-auto w-auto max-w-[33%] m-2.5 rounded-xl relative ">
+      <div className="services-container w-full h-full md:h-[60vh] flex md:flex-row flex-col  justify-evenly rounded-xl mt-40">
+        <div className="service1 service-section h-auto w-auto md:max-w-[33%] m-2.5 rounded-xl relative ">
           <div className="service-image flex justify-center pt-7 text-7xl">
             <FontAwesomeIcon icon={faPenToSquare} />
           </div>
@@ -45,14 +45,16 @@ function RouteComponent() {
             </p>
           </div>
           <div className="service-btn">
-            <a
-              href="./whatiswebdesign.html"
-              className="card-link"
-              aria-label="What is Web Design"
-            ></a>
+            <Link
+              to="/pages/webdesign"
+              className="nav-link"
+              activeProps={{ className: "nav-link is-active" }}
+            >
+              Home
+            </Link>
           </div>
         </div>
-        <div className="service2 service-section h-auto w-auto max-w-[33%] m-2.5 rounded-xl relative">
+        <div className="service2 service-section h-auto w-auto md:max-w-[33%] m-2.5 rounded-xl relative">
           <div className="service-image flex justify-center pt-7 text-7xl">
             <FontAwesomeIcon icon={faCode} />
           </div>
@@ -76,7 +78,7 @@ function RouteComponent() {
             ></a>
           </div>
         </div>
-        <div className="service3 service-section h-auto w-auto max-w-[33%] m-2.5 rounded-xl relative">
+        <div className="service3 service-section h-auto w-auto md:max-w-[33%] m-2.5 rounded-xl relative">
           <div className="service-image flex justify-center pt-7 text-7xl">
             <FontAwesomeIcon icon={faScrewdriverWrench} />
           </div>
