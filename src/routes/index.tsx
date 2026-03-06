@@ -6,12 +6,16 @@ function App() {
   return (
     <main className="container flex flex-col justify-center items-center">
       <section
-        className="header-container h-screen w-full flex-col sm:flex-row flex items-center justify-around"
+        className="header-container h-screen w-full flex-col sm:flex-row flex gap-10 items-center sm:justify-around"
         id="home"
       >
-        <div className="image-container w-[50%} flex justify-center items-start">
-          <div className="image-src h-50 w-50 md:h-75 md:w-75 rounded-[50%] mr-10">
-            <img src="null" alt="" />
+        <div className="image-container w-[50%} flex">
+          <div className="image-src h-50 w-50 md:h-75 md:w-75 rounded-[50%] mt-10 sm:mr-10">
+            <img
+              className="md:ml-12 md:mt-12"
+              src="/public/images/Avatar200.png"
+              alt=""
+            />
           </div>
         </div>
 
