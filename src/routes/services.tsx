@@ -46,7 +46,7 @@ function RouteComponent() {
           </div>
           <div className="service-btn">
             <Link
-              to="/pages/webdesign"
+              to="/services/-websdesign"
               className="nav-link"
               activeProps={{ className: "nav-link is-active" }}
             >
