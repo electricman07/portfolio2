@@ -332,3 +332,9 @@ nav.active {
   background: var(--bg-primary);
   box-shadow: var(--box-shadow);
 }
+
+.section-stack {
+  background: var(--bg-primary);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
