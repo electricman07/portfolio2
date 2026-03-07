@@ -36,7 +36,7 @@ function About() {
             essential for creating modern, responsive, and user-friendly
             websites:
           </p>
-          <ul className="list-disc">
+          <ul className="list-disc ml-5">
             <li>
               <strong>HTML:</strong> Proficient in HTML5, Glen structures
               content with semantic markup, ensuring accessibility and search
