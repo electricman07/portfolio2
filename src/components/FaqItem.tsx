@@ -1,7 +1,12 @@
-import React from "react";
 import { useState } from "react";
 
-const FaqItem = ({ id, question, answer }) => {
+interface FaqItemProps {
+  id: string | number;
+  question: string;
+  answer: string;
+}
+
+const FaqItem = ({ id, question, answer }: FaqItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div key={id} onClick={() => setIsOpen(!isOpen)}>
