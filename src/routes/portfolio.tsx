@@ -25,13 +25,13 @@ function RouteComponent() {
   return (
     <>
       <section
-        className="section-5 sections bg-[var(--bg-primary)] flex flex-col items-center justify-center rounded-xl shadow-[var(--box-shadow)]"
+        className="section-5 sections  flex flex-col items-center justify-center rounded-xl h-[80vh]"
         id="portfolio"
       >
-        <h2 className="portfolio-title section-title text-5xl text-center mt-17.5 p-2.5 w-auto rounded-xl">
+        <h2 className="portfolio-title section-title text-5xl text-center mt-17.5 p-2.5 w-auto rounded-xl mb-40">
           Portfolio
         </h2>
-        <div className="flex flex-col ">
+        <div className="flex flex-col pt-32 pl-9 pr-9 bg-[var(--bg-transparent)] shadow-[var(--box-shadow)] w-[90%] h-[80%] rounded-xl">
           <ImageSlider images={images} />
         </div>
       </section>
