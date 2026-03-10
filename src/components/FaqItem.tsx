@@ -10,7 +10,7 @@ const FaqItem = ({ id, question, answer }: FaqItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div key={id} onClick={() => setIsOpen(!isOpen)}>
-      <div className="faq-question p-2.5 my-2.5 mx-0 cursor-pointer rounded-xl bg-(--bg-background) flex justify-between">
+      <div className="faq-question p-2.5 my-2.5 mx-0 cursor-pointer rounded-xl bg-(--bg-background) text-[var(--text-primary)] flex justify-between">
         <div>
           <strong>{question} </strong>
         </div>
@@ -18,7 +18,7 @@ const FaqItem = ({ id, question, answer }: FaqItemProps) => {
       </div>
       <div>
         {isOpen && (
-          <div className="faq-answer m-0 p-2.5 bg-(--bg-background) rounded-xl">
+          <div className="faq-answer m-0 p-2.5 bg-(--bg-background) text-[var(--text-primary)] rounded-xl">
             <p>{answer}</p>
           </div>
         )}
