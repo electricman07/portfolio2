@@ -7,13 +7,13 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <section
-      className="section-2 sections flex flex-col items-center mt-40"
+      className="section-2 sections flex flex-col items-center mt-40 m-20 rounded-xl"
       id="about"
     >
-      <h2 className="about-title section-title p-2.5 w-auto text-center rounded-xl  mt-5 text-5xl">
+      <h2 className="about-title section-title p-2.5 w-auto text-center rounded-xl mt-5 text-5xl">
         About
       </h2>
-      <article className="about-article-container p-5 bg-(--bg-primary)">
+      <article className="about-article-container p-5 bg-(--bg-primary) mt-40">
         <header>
           <h2 className="text-4xl font-bold">About me</h2>
         </header>
