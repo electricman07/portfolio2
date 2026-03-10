@@ -10,10 +10,10 @@ function RouteComponent() {
       className="section-stack sections flex flex-col items-center m-20"
       id="stack"
     >
-      <article className="stack-article-container p-8">
-        <h2 className="stack-title section-title p-2.5 w-auto text-center text-5xl mt-17.5">
-          The Web Design Technical Stack
-        </h2>
+      <h2 className="stack-title section-title p-2.5 w-auto text-center text-5xl mt-17.5 rounded-xl">
+        The Web Design Technical Stack
+      </h2>
+      <article className="stack-article-container p-8 mt-40">
         <section>
           <h2 className="text-3xl font-bold p-5">
             Introduction to Web Design and Development
