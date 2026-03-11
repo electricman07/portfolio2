@@ -14,6 +14,8 @@ export interface BlogPost {
   tags: string[];
   date: string;
   gradient: string;
+  image: string;
+  alt: string;
 }
 
 export const faqItems: FAQItem[] = [
@@ -91,6 +93,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Web Design", "Trends", "AI", "UX"],
     date: "2024-12-01",
     gradient: "from-primary to-accent",
+    image:
+      "https://unsplash.com/photos/qC2n6RQU4Vw/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8N3x8d2ViJTIwZGVzaWdufGVufDB8fHx8MTcxNTExNjczOHww&force=true&w=640",
+    alt: "alternative text",
   },
   {
     id: "2",
@@ -103,6 +108,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Responsive Design", "CSS", "Mobile"],
     date: "2024-11-15",
     gradient: "from-secondary to-primary",
+    image:
+      "https://unsplash.com/photos/OqtafYT5kTw/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTZ8fHdlYiUyMGR2ZWxvcG1lbnR8ZW58MHx8fHwxNzE1MTIwMzU0fDA&force=true&w=640",
+    alt: "alternative text",
   },
   {
     id: "3",
@@ -115,6 +123,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Business", "Web Design", "Marketing"],
     date: "2024-10-20",
     gradient: "from-accent to-secondary",
+    image:
+      "https://unsplash.com/photos/KE0nC8-58MQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzB8fHdlYiUyMGR2ZWxvcG1lbnR8ZW58MHx8fHwxNzE1MTIwMzY4fDA&force=true&w=640",
+    alt: "alternative text",
   },
   {
     id: "4",
@@ -127,7 +138,11 @@ export const blogPosts: BlogPost[] = [
     tags: ["Tailwind CSS", "CSS", "Tutorial"],
     date: "2024-09-10",
     gradient: "from-primary via-accent to-secondary",
+    image:
+      "https://unsplash.com/photos/v9FQR4tbIq8/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8OHx8d2ViJTIwZGVzaWdufGVufDB8fHx8MTcxNTExNjczOHww&force=true&w=640",
+    alt: "alternative text",
   },
+
   {
     id: "5",
     slug: "choosing-right-tech-stack",
@@ -139,6 +154,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Technology", "Development", "Strategy"],
     date: "2024-08-05",
     gradient: "from-secondary to-accent",
+    image:
+      "https://unsplash.com/photos/hGV2TfOh0ns/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8d2ViJTIwZGVzaWdufGVufDB8fHx8MTcxNTExNjczOHww&force=true&w=640",
+    alt: "alternative text",
   },
   {
     id: "6",
@@ -151,6 +169,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Performance", "SEO", "Development"],
     date: "2024-07-20",
     gradient: "from-accent to-primary",
+    image:
+      "https://unsplash.com/photos/npxXWgQ33ZQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTh8fHdlYiUyMGR2ZWxvcG1lbnR8ZW58MHx8fHwxNzE1MTIwMzU0fDA&force=true&w=640",
+    alt: "alternative text",
   },
   {
     id: "7",
@@ -163,6 +184,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Accessibility", "UX", "Best Practices"],
     date: "2024-06-15",
     gradient: "from-primary to-secondary",
+    image:
+      "https://unsplash.com/photos/qC2n6RQU4Vw/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8N3x8d2ViJTIwZGVzaWdufGVufDB8fHx8MTcxNTExNjczOHww&force=true&w=640",
+    alt: "alternative text",
   },
   {
     id: "8",
@@ -175,5 +199,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["React", "Vue", "JavaScript", "Comparison"],
     date: "2024-05-01",
     gradient: "from-secondary via-primary to-accent",
+    image:
+      "https://unsplash.com/photos/OqtafYT5kTw/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTZ8fHdlYiUyMGR2ZWxvcG1lbnR8ZW58MHx8fHwxNzE1MTIwMzU0fDA&force=true&w=640",
+    alt: "alternative text",
   },
 ];
