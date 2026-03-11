@@ -32,6 +32,7 @@
   --accent-secondary: #e8b87a;
   --accent-hover: #7bd4c4;
   --bg-primary: #513d45;
+  --bg-background: #0a0a0a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,6 +45,8 @@
     --accent-secondary: #e8b87a;
     --accent-hover: #7bd4c4;
     --bg-primary: #aec2ba;
+    --bg-background: #f5f5f5;
+    --bg-transparent: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -338,4 +341,11 @@ nav.active {
   background: var(--bg-primary);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
+}
+
+.read-more {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  display: inline-block;
 }
