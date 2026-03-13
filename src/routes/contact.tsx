@@ -62,17 +62,17 @@ const RouteComponent: React.FC = () => {
       <h2 className=" section-title p-2.5 w-auto text-center rounded-xl mt-5 text-5xl">
         Contact Me
       </h2>
-      <p className="mt-5 bg-(--bg-background) rounded-xl p-5 shadow-(--box-shadow)">
+      <p className="mt-5 bg-(--accent-secondary) rounded-xl p-5 shadow-(--box-shadow)">
         Whether you have a question about my services, want to discuss a
         potential project, or just want to say hello, I'm here to help. Feel
         free to reach out using the contact form below or through any of the
         provided contact information. I look forward to connecting with you!
       </p>
 
-      <div className="flex mt-10 shadow-(--box-shadow)">
-        <div className="min-w-lg bg-(--bg-background)  rounded-bl-xl rounded-tl-xl p-10 text-(9)--text-primary)">
+      <div className="flex mt-10 rounded-xl shadow-(--box-shadow)">
+        <div className="min-w-lg bg-(--accent-secondary)  rounded-bl-xl rounded-tl-xl p-10 text-(9)--text-primary)">
           <div>
-            <h3 className="text-center p-10">Contact Details</h3>
+            <h3 className="text-center p-10 text-4xl">Contact Details</h3>
           </div>
           <div className="flex flex-col h-4/5 justify-between">
             <div>
