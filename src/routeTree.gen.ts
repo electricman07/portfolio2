@@ -17,6 +17,9 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesUiuxdesignRouteImport } from './routes/services/uiuxdesign'
+import { Route as ServicesSeooptimizationRouteImport } from './routes/services/seooptimization'
+import { Route as ServicesEcommercesolutionsRouteImport } from './routes/services/ecommercesolutions'
 
 const StackRoute = StackRouteImport.update({
   id: '/stack',
@@ -58,6 +61,22 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesUiuxdesignRoute = ServicesUiuxdesignRouteImport.update({
+  id: '/uiuxdesign',
+  path: '/uiuxdesign',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesSeooptimizationRoute = ServicesSeooptimizationRouteImport.update({
+  id: '/seooptimization',
+  path: '/seooptimization',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesEcommercesolutionsRoute =
+  ServicesEcommercesolutionsRouteImport.update({
+    id: '/ecommercesolutions',
+    path: '/ecommercesolutions',
+    getParentRoute: () => ServicesRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -66,8 +85,11 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/portfolio': typeof PortfolioRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/stack': typeof StackRoute
+  '/services/ecommercesolutions': typeof ServicesEcommercesolutionsRoute
+  '/services/seooptimization': typeof ServicesSeooptimizationRoute
+  '/services/uiuxdesign': typeof ServicesUiuxdesignRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -76,8 +98,11 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/portfolio': typeof PortfolioRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/stack': typeof StackRoute
+  '/services/ecommercesolutions': typeof ServicesEcommercesolutionsRoute
+  '/services/seooptimization': typeof ServicesSeooptimizationRoute
+  '/services/uiuxdesign': typeof ServicesUiuxdesignRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -87,8 +112,11 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/portfolio': typeof PortfolioRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/stack': typeof StackRoute
+  '/services/ecommercesolutions': typeof ServicesEcommercesolutionsRoute
+  '/services/seooptimization': typeof ServicesSeooptimizationRoute
+  '/services/uiuxdesign': typeof ServicesUiuxdesignRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +129,9 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/services'
     | '/stack'
+    | '/services/ecommercesolutions'
+    | '/services/seooptimization'
+    | '/services/uiuxdesign'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +142,9 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/services'
     | '/stack'
+    | '/services/ecommercesolutions'
+    | '/services/seooptimization'
+    | '/services/uiuxdesign'
   id:
     | '__root__'
     | '/'
@@ -121,6 +155,9 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/services'
     | '/stack'
+    | '/services/ecommercesolutions'
+    | '/services/seooptimization'
+    | '/services/uiuxdesign'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -130,7 +167,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   PortfolioRoute: typeof PortfolioRoute
-  ServicesRoute: typeof ServicesRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
   StackRoute: typeof StackRoute
 }
 
@@ -192,8 +229,45 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/uiuxdesign': {
+      id: '/services/uiuxdesign'
+      path: '/uiuxdesign'
+      fullPath: '/services/uiuxdesign'
+      preLoaderRoute: typeof ServicesUiuxdesignRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/seooptimization': {
+      id: '/services/seooptimization'
+      path: '/seooptimization'
+      fullPath: '/services/seooptimization'
+      preLoaderRoute: typeof ServicesSeooptimizationRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/ecommercesolutions': {
+      id: '/services/ecommercesolutions'
+      path: '/ecommercesolutions'
+      fullPath: '/services/ecommercesolutions'
+      preLoaderRoute: typeof ServicesEcommercesolutionsRouteImport
+      parentRoute: typeof ServicesRoute
+    }
   }
 }
+
+interface ServicesRouteChildren {
+  ServicesEcommercesolutionsRoute: typeof ServicesEcommercesolutionsRoute
+  ServicesSeooptimizationRoute: typeof ServicesSeooptimizationRoute
+  ServicesUiuxdesignRoute: typeof ServicesUiuxdesignRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesEcommercesolutionsRoute: ServicesEcommercesolutionsRoute,
+  ServicesSeooptimizationRoute: ServicesSeooptimizationRoute,
+  ServicesUiuxdesignRoute: ServicesUiuxdesignRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -202,7 +276,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   PortfolioRoute: PortfolioRoute,
-  ServicesRoute: ServicesRoute,
+  ServicesRoute: ServicesRouteWithChildren,
   StackRoute: StackRoute,
 }
 export const routeTree = rootRouteImport
