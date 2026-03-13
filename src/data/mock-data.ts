@@ -1,3 +1,13 @@
+export interface Service {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  icon: string;
+  details: string;
+  features: string[];
+}
+
 export interface FAQItem {
   id: number;
   question: string;
@@ -17,6 +27,111 @@ export interface BlogPost {
   image: string;
   alt: string;
 }
+
+export const services: Service[] = [
+  {
+    id: "1",
+    slug: "webdesign",
+    title: "Web Design",
+    description:
+      "Stunning, custom website designs that capture your brand's essence and engage visitors from the first click.",
+    icon: "palette",
+    details:
+      "I craft visually compelling websites that don't just look beautiful—they perform. Every design starts with understanding your brand, audience, and goals. From wireframes to pixel-perfect mockups, I ensure every element serves a purpose. My designs are responsive, accessible, and optimized for conversion.",
+    features: [
+      "Custom mockups & wireframes",
+      "Brand-aligned visual identity",
+      "Responsive layouts",
+      "Interactive prototypes",
+      "Design system creation",
+    ],
+  },
+  {
+    id: "2",
+    slug: "webdevelopment",
+    title: "Web Development",
+    description:
+      "Clean, performant code that brings designs to life with modern technologies and best practices.",
+    icon: "code",
+    details:
+      "I build websites and web applications using cutting-edge technologies like React, TypeScript, and Tailwind CSS. Every project is built with performance, scalability, and maintainability in mind. I write clean, well-documented code that your team can easily work with.",
+    features: [
+      "React & TypeScript development",
+      "API integration",
+      "Performance optimization",
+      "Clean, maintainable code",
+      "Version control with Git",
+    ],
+  },
+  {
+    id: "3",
+    slug: "websitemaintenance",
+    title: "Website Maintenance",
+    description:
+      "Keep your website running smoothly with regular updates, security patches, and performance monitoring.",
+    icon: "wrench",
+    details:
+      "A website is never truly 'done.' I provide ongoing maintenance services to ensure your site stays secure, up-to-date, and performing at its best. From content updates to security patches, I handle the technical details so you can focus on your business.",
+    features: [
+      "Regular security updates",
+      "Performance monitoring",
+      "Content updates",
+      "Backup management",
+      "Uptime monitoring",
+    ],
+  },
+  {
+    id: "4",
+    slug: "ecommercesolutions",
+    title: "E-Commerce Solutions",
+    description:
+      "Full-featured online stores that drive sales and deliver seamless shopping experiences.",
+    icon: "shopping-cart",
+    details:
+      "I build e-commerce solutions that convert visitors into customers. From product catalogs to payment processing, I create seamless shopping experiences that drive revenue. Every store is optimized for mobile, fast loading, and easy to manage.",
+    features: [
+      "Product catalog setup",
+      "Secure payment processing",
+      "Inventory management",
+      "Order tracking",
+      "Customer account portals",
+    ],
+  },
+  {
+    id: "5",
+    slug: "seooptimization",
+    title: "SEO Optimization",
+    description:
+      "Boost your visibility and drive organic traffic with data-driven SEO strategies.",
+    icon: "search",
+    details:
+      "I implement comprehensive SEO strategies that help your website rank higher in search results. From technical SEO to content optimization, I use data-driven approaches to increase your organic visibility and drive qualified traffic to your site.",
+    features: [
+      "Technical SEO audits",
+      "Keyword research & strategy",
+      "On-page optimization",
+      "Performance optimization",
+      "Analytics & reporting",
+    ],
+  },
+  {
+    id: "6",
+    slug: "uiuxdesign",
+    title: "UI/UX Design",
+    description:
+      "User-centered design that creates intuitive, delightful digital experiences people love.",
+    icon: "layers",
+    details:
+      "Great design is invisible—it just works. I create user interfaces and experiences that feel intuitive and natural. Through user research, prototyping, and testing, I ensure every interaction is purposeful and every journey is smooth.",
+    features: [
+      "User research & personas",
+      "Information architecture",
+      "Wireframing & prototyping",
+      "Usability testing",
+      "Interaction design",
+    ],
+  },
+];
 
 export const faqItems: FAQItem[] = [
   {
