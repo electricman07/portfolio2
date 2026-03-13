@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-
+import { techStack } from "#/data/mock-data";
+import StackCard from "#/components/StackCard";
 export const Route = createFileRoute("/stack")({
   component: RouteComponent,
 });
@@ -28,97 +29,17 @@ function RouteComponent() {
           </p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold p-5">Front-End Development</h2>
-          <p>
-            Front-end development is concerned with the user interface and user
-            experience aspects of a website. It involves the use of:
-          </p>
-          <ul className="list-disc ml-5">
-            <li>
-              <strong>HTML:</strong> The backbone of any website, used to
-              structure content on the web.
-            </li>
-            <li>
-              <strong>CSS:</strong> The styling language that describes how HTML
-              elements should be displayed on screen.
-            </li>
-            <li>
-              <strong>JavaScript:</strong> A scripting language that enables
-              interactive features on websites.
-            </li>
-            <li>
-              <strong>Frameworks and Libraries:</strong> Tools like React,
-              Angular, and Vue.js that provide pre-written code to help build
-              complex applications more efficiently.
-            </li>
-          </ul>
+          {techStack.map(({ id, title, intro, headline, definition }) => (
+            <StackCard
+              id={id}
+              title={title}
+              intro={intro}
+              headline={headline}
+              definition={definition}
+            />
+          ))}
         </section>
-        <section>
-          <h2 className="text-2xl font-bold p-5">Back-End Development</h2>
-          <p>
-            The back-end, or server-side, is where the application runs, and
-            data processing is performed. It typically involves:
-          </p>
-          <ul className="list-disc ml-5">
-            <li>
-              <strong>Server Languages:</strong> Such as Node.js, Ruby, Python,
-              PHP, and Java, which handle the logic of the application.
-            </li>
-            <li>
-              <strong>Server Frameworks:</strong> Frameworks like Express.js,
-              Django, Ruby on Rails, and Laravel that provide tools and
-              libraries to simplify complex coding tasks.
-            </li>
-            <li>
-              <strong>APIs:</strong> Application Programming Interfaces allow
-              different software components to communicate with each other.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2 className="text-2xl font-bold p-5">Databases</h2>
-          <p>
-            Databases store, retrieve, and manage data. They are an essential
-            part of the back-end stack. Common databases include:
-          </p>
-          <ul className="list-disc ml-5">
-            <li>
-              <strong>SQL Databases:</strong> Such as MySQL, PostgreSQL, and
-              Microsoft SQL Server, which use structured query language for
-              managing data.
-            </li>
-            <li>
-              <strong>NoSQL Databases:</strong> Like MongoDB and Cassandra,
-              which are designed for large sets of distributed data.
-            </li>
-            <li>
-              <strong>ORMs:</strong> Object-Relational Mapping tools like
-              Sequelize and Mongoose that allow developers to interact with
-              databases using programming languages.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2 className="text-2xl font-bold p-5">
-            Connecting Front-End and Back-End
-          </h2>
-          <p>Integration of the front-end and back-end is achieved through:</p>
-          <ul className="list-disc ml-5">
-            <li>
-              <strong>HTTP Requests:</strong> The foundation of data exchange on
-              the web, allowing clients and servers to communicate.
-            </li>
-            <li>
-              <strong>RESTful Services:</strong> Architectural style for
-              designing networked applications, using HTTP to make calls between
-              machines.
-            </li>
-            <li>
-              <strong>GraphQL:</strong> A query language for APIs, providing a
-              more efficient way to design and run queries.
-            </li>
-          </ul>
-        </section>
+
         <section>
           <h2 className="text-2xl font-bold p-5">Conclusion</h2>
           <p>
