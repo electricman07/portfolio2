@@ -7,7 +7,7 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <section
-      className="section-2 sections flex flex-col items-center mt-40 m-20 rounded-xl"
+      className="section-2 sections flex flex-col items-center m-20 rounded-xl"
       id="about"
     >
       <h2 className="about-title section-title p-2.5 w-auto text-center rounded-xl mt-5 text-5xl">
@@ -15,13 +15,13 @@ function About() {
       </h2>
       <article className="about-article-container p-5 bg-(--bg-primary) mt-40">
         <header>
-          <h2 className="text-4xl font-bold">About me</h2>
+          <h2 className="text-4xl font-bold mb-2.5">About me</h2>
         </header>
         <section>
-          <h3 className="text-2xl font-bold">
+          <h3 className="text-2xl font-bold mb-2">
             Professional Web Designer and Developer
           </h3>
-          <p>
+          <p className="mb-5">
             With over five years of professional experience, I have mastered the
             art of web design and development. My journey began with a
             fascination for the foundational language of the web, HTML, and has
@@ -30,13 +30,15 @@ function About() {
           </p>
         </section>
         <section>
-          <h3 className="text-2xl font-bold">Expertise in Web Technologies</h3>
-          <p>
+          <h3 className="text-2xl font-bold mb-2.5">
+            Expertise in Web Technologies
+          </h3>
+          <p className="mb-5">
             My expertise encompasses a variety of web technologies that are
             essential for creating modern, responsive, and user-friendly
             websites:
           </p>
-          <ul className="list-disc ml-5">
+          <ul className="list-disc ml-5 mb-5">
             <li>
               <strong>HTML:</strong> Proficient in HTML5, Glen structures
               content with semantic markup, ensuring accessibility and search
@@ -70,7 +72,9 @@ function About() {
           </ul>
         </section>
         <section>
-          <h3 className="text-2xl font-bold">Commitment to Excellence</h3>
+          <h3 className="text-2xl font-bold mb-2.5">
+            Commitment to Excellence
+          </h3>
           <p>
             My commitment to excellence is evident in every project I undertake.
             I stay abreast of the latest trends and continuously hone my skills
