@@ -29,7 +29,7 @@
   --text-secondary: #b8d9d4;
   --text-light: #7fa9a4;
   --accent-primary: #5fbfa8;
-  --accent-secondary: #e8b87a;
+  --accent-secondary: #376494;
   --accent-hover: #7bd4c4;
   --bg-primary: #513d45;
   --bg-background: #0a0a0a;
@@ -303,6 +303,7 @@ nav.active {
   }
 
   .nav-links {
+    visibility: hidden;
     position: fixed;
     right: -110%;
     top: -2%;
@@ -317,6 +318,7 @@ nav.active {
 
   .nav-links.active {
     right: 0;
+    visibility: visible;
   }
 }
 
