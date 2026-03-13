@@ -22,7 +22,7 @@ export default function Header() {
 
         <div className="ml-auto flex items-center gap-1.5 sm:ml-0 sm:gap-2 ">
           <a
-            href="https://x.com/tan_stack"
+            href="https://x.com/popowich_glen"
             target="_blank"
             rel="noreferrer"
             className="hidden rounded-xl p-2 text-(--accent-secondary) transition hover:bg-(--accent-secondary) hover:text-(--text-secondary) sm:block"
@@ -36,7 +36,7 @@ export default function Header() {
             </svg>
           </a>
           <a
-            href="https://github.com/TanStack"
+            href="https://github.com/electricman07"
             target="_blank"
             rel="noreferrer"
             className="hidden rounded-xl p-2 text-(--accent-secondary) transition hover:bg-(--accent-secondary) hover:text-(--text-secondary) sm:block"
