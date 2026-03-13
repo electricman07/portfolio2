@@ -1,5 +1,5 @@
 export interface Service {
-  id: string;
+  id: number | string;
   slug: string;
   title: string;
   description: string;
@@ -9,13 +9,13 @@ export interface Service {
 }
 
 export interface FAQItem {
-  id: number;
+  id: number | string;
   question: string;
   answer: string;
 }
 
 export interface BlogPost {
-  id: string;
+  id: number | string;
   slug: string;
   title: string;
   excerpt: string;
@@ -26,6 +26,19 @@ export interface BlogPost {
   gradient: string;
   image: string;
   alt: string;
+}
+
+export interface TechDefinition {
+  name: number | string;
+  definition: string;
+}
+
+export interface TechStack {
+  id: number | string;
+  title: string;
+  intro: string;
+  definition: string[];
+  headline: string[];
 }
 
 export const services: Service[] = [
@@ -317,5 +330,144 @@ export const blogPosts: BlogPost[] = [
     image:
       "https://unsplash.com/photos/OqtafYT5kTw/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTZ8fHdlYiUyMGR2ZWxvcG1lbnR8ZW58MHx8fHwxNzE1MTIwMzU0fDA&force=true&w=640",
     alt: "alternative text",
+  },
+];
+
+export const techStack: TechStack[] = [
+  {
+    id: 1,
+    title: "Front-End Development",
+    intro:
+      "Front-end development is concerned with the user interface and user experience aspects of a website. It involves the use of:",
+    headline: ["HTML:", "CSS:", "JavaScript", "Frameworks and Libraies"],
+    definition: [
+      "The backbone of any website, used to structure content on the web.",
+      "The styling language that describes how HTML elements should be displayed on screen.",
+      " A scripting language that enables interactive features on websites",
+      "Tools like React, Angular, and Vue.js that provide pre-written code to help build complex applications more efficiently.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Back-End Devlopment",
+    intro:
+      "The back-end, or server-side, is where the application runs, and data processing is performed. It typically involves:",
+    headline: ["Server Languages:", "Server Frameworks:", "APIs:"],
+    definition: [
+      " Such as Node.js, Ruby, Python, PHP, and Java, which handle the logic of the application.",
+      " Frameworks like Express.js, Django, Ruby on Rails, and Laravel that provide tools and libraries to simplify complex coding tasks.",
+      "Application Programming Interfaces allow different software components to communicate with each other.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Databases",
+    intro:
+      "Databases store, retrieve, and manage data. They are an essential part of the back-end stack. Common databases include:",
+    headline: ["SQL Databases:", "NoSQL Databases: ", "ORMs: "],
+    definition: [
+      "Such as MySQL, PostgreSQL, and Microsoft SQL Server, which use structured query language for managing data.",
+      "Like MongoDB and Cassandra, which are designed for large sets of distributed data.",
+      "Object-Relational Mapping tools like Sequelize and Mongoose that allow developers to interact with databases using programming languages.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Connecting Front-End and Back-End",
+    intro: "Integration of the front-end and back-end is achieved through:",
+    headline: ["HTTP Requests:", "RESTful Services:", "GraphQL: "],
+    definition: [
+      " The foundation of data exchange on the web, allowing clients and servers to communicate.",
+      "Architectural style for designing networked applications, using HTTP to make calls between machines.",
+      "A query language for APIs, providing a more efficient way to design and run queries.",
+    ],
+  },
+];
+
+export const techDefinitions: TechDefinition[] = [
+  {
+    name: "React",
+    definition:
+      "React is an open-source JavaScript library by Facebook for building user interfaces. It uses component-based architecture and a virtual DOM for efficient rendering.",
+  },
+  {
+    name: "TypeScript",
+    definition:
+      "TypeScript is a strongly typed superset of JavaScript by Microsoft. It adds static type checking and interfaces for more maintainable code.",
+  },
+  {
+    name: "Tailwind CSS",
+    definition:
+      "Tailwind CSS is a utility-first CSS framework providing low-level utility classes for building custom designs directly in markup.",
+  },
+  {
+    name: "PostgreSQL",
+    definition:
+      "PostgreSQL is a powerful, open-source relational database known for reliability, data integrity, and advanced features like complex queries and JSON support.",
+  },
+  {
+    name: "MongoDB",
+    definition:
+      "MongoDB is a NoSQL database storing data in flexible, JSON-like documents. Ideal for applications with evolving data schemas.",
+  },
+  {
+    name: "Node.js",
+    definition:
+      "Node.js is a JavaScript runtime built on Chrome's V8 engine for server-side development, known for its event-driven, non-blocking I/O model.",
+  },
+  {
+    name: "HTML",
+    definition:
+      "HTML (HyperText Markup Language) is the standard markup language for creating web pages, defining structure and content using elements and tags.",
+  },
+  {
+    name: "CSS",
+    definition:
+      "CSS (Cascading Style Sheets) describes the presentation of HTML documents, controlling layout, colors, fonts, and visual appearance.",
+  },
+  {
+    name: "JavaScript",
+    definition:
+      "JavaScript is a versatile, high-level programming language for adding interactivity to websites. Runs in browsers and on servers with Node.js.",
+  },
+  {
+    name: "Framer Motion",
+    definition:
+      "Framer Motion is a production-ready animation library for React, providing declarative APIs for fluid animations and gestures.",
+  },
+  {
+    name: "Stripe",
+    definition:
+      "Stripe provides payment processing infrastructure, enabling businesses to accept payments, manage subscriptions, and handle financial operations.",
+  },
+  {
+    name: "Cloudinary",
+    definition:
+      "Cloudinary is a cloud-based media management platform for image and video upload, storage, optimization, and delivery.",
+  },
+  {
+    name: "WebSocket",
+    definition:
+      "WebSocket provides full-duplex communication over a single TCP connection for real-time, bidirectional client-server communication.",
+  },
+  {
+    name: "Recharts",
+    definition:
+      "Recharts is a composable charting library built with React components for creating data visualizations.",
+  },
+  {
+    name: "Mapbox",
+    definition:
+      "Mapbox provides custom maps, geocoding, navigation, and location services for web and mobile applications.",
+  },
+  {
+    name: "Google Maps API",
+    definition:
+      "Google Maps API allows developers to embed customizable Google Maps with markers, routes, and interactive features.",
+  },
+  {
+    name: "Git",
+    definition:
+      "Git is a distributed version control system tracking source code changes, enabling collaboration while maintaining complete change history.",
   },
 ];
