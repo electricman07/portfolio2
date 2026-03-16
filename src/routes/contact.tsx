@@ -5,7 +5,6 @@ import * as yup from "yup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
-  fab,
   faFacebook,
   faGithub,
   faInstagram,
@@ -58,23 +57,25 @@ const RouteComponent: React.FC = () => {
   };
 
   return (
-    <div className=" sections flex flex-col items-center m-20 rounded-xl h-screen">
-      <h2 className=" section-title p-2.5 w-auto text-center rounded-xl mt-5 text-5xl">
+    <div className=" sections flex flex-col items-center m-2.5 md:m-20 rounded-xl h-full">
+      <h2 className=" section-title p-2.5 w-auto text-center rounded-xl mt-5  text-2xl md:text-5xl">
         Contact Me
       </h2>
-      <p className="mt-5 bg-(--accent-secondary) rounded-xl p-5 shadow-(--box-shadow)">
+      <p className="mt-5 bg-(--accent-secondary) rounded-xl w-80 p-5 shadow-(--box-shadow)">
         Whether you have a question about my services, want to discuss a
         potential project, or just want to say hello, I'm here to help. Feel
         free to reach out using the contact form below or through any of the
         provided contact information. I look forward to connecting with you!
       </p>
 
-      <div className="flex mt-10 rounded-xl shadow-(--box-shadow)">
-        <div className="min-w-lg bg-(--accent-secondary)  rounded-bl-xl rounded-tl-xl p-10 text-(9)--text-primary)">
+      <div className="flex flex-col w-80 lg:flex-row mt-10 md:m-2.5 rounded-xl shadow-(--box-shadow)">
+        <div className=" min-w-80 md:min-w-lg bg-(--accent-secondary)  rounded-t-xl lg:rounded-bl-xl lg:rounded-tl-xl p-2.5 md:p-10 text-(--text-primary)">
           <div>
-            <h3 className="text-center p-10 text-4xl">Contact Details</h3>
+            <h3 className="text-center py-10 md:p-10 text-2xl md:text-4xl">
+              Contact Details
+            </h3>
           </div>
-          <div className="flex flex-col h-4/5 justify-between">
+          <div className="flex flex-col h-1/2 md:h-4/5 justify-between">
             <div>
               <p>
                 <FontAwesomeIcon
@@ -92,7 +93,7 @@ const RouteComponent: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-4xl flex justify-center">
+            <div className="text-4xl flex justify-center my-2.5">
               <ul className="social-icons flex">
                 <li>
                   <a
@@ -155,9 +156,9 @@ const RouteComponent: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="w-[500px} h-full">
+        <div className=" w-80 md:w-[500px} h-4/5 md:h-full">
           <form
-            className="min-w-lg max-w-2xl mx-auto p-6 bg-(--bg-primary) shadow-lg rounded-r-xl space-y-4"
+            className="md:min-w-lg md:max-w-2xl md:mx-auto p-6 bg-(--bg-primary) shadow-lg rounded-b-xl md:rounded-r-xl space-y-4"
             onSubmit={handleSubmit(onSubmit)}
             style={{
               maxWidth: "400px",
