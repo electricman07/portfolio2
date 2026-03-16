@@ -17,7 +17,7 @@ function RouteComponent() {
       <h2 className="services-title section-title p-2.5 w-auto text-center rounded-xl  mt-5 text-5xl ">
         Services
       </h2>
-      <div className="services-container md:w-[95%] w-fullh-full flex flex-col md:flex-row md:flex-wrap justify-evenly md:justify-center rounded-xl mt-40">
+      <div className="services-container md:w-[95%] w-full h-full flex flex-col md:flex-row md:flex-wrap justify-evenly md:justify-center rounded-xl mt-40">
         <div className="service-section h-auto w-auto  m-2.5 rounded-xl relative flex flex-wrap justify-center">
           {services.map(({ id, slug, title, description, details, icon }) => (
             <ServicesCard
