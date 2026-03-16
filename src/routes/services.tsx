@@ -11,10 +11,10 @@ export const Route = createFileRoute("/services")({
 function RouteComponent() {
   return (
     <section
-      className="section-1 sections flex flex-col items-center m-20"
+      className="section-1 sections flex flex-col items-center m-2.5 md:m-20"
       id="services"
     >
-      <h2 className="services-title section-title p-2.5 w-auto text-center rounded-xl  mt-5 text-5xl ">
+      <h2 className="services-title section-title p-2.5 w-auto text-center rounded-xl  mt-5 text-3xl md:text-5xl ">
         Services
       </h2>
       <div className="services-container md:w-[95%] w-full h-full flex flex-col md:flex-row md:flex-wrap justify-evenly md:justify-center rounded-xl mt-40">
