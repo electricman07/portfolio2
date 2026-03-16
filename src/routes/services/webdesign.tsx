@@ -1,7 +1,9 @@
-import React from "react";
+import { createFileRoute } from "@tanstack/react-router";
 
-const webdesign = () => {
-  return <div>webdesign</div>;
-};
+export const Route = createFileRoute("/services/webdesign")({
+  component: RouteComponent,
+});
 
-export default webdesign;
+function RouteComponent() {
+  return <div>Hello "/services/ecommercesolutions"!</div>;
+}

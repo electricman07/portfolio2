@@ -17,8 +17,17 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesWhatiswebmaintenanceRouteImport } from './routes/services/whatiswebmaintenance'
+import { Route as ServicesWhatiswebdevelopmentRouteImport } from './routes/services/whatiswebdevelopment'
+import { Route as ServicesWhatiswebdesignRouteImport } from './routes/services/whatiswebdesign'
+import { Route as ServicesWebsitemaintenanceRouteImport } from './routes/services/websitemaintenance'
+import { Route as ServicesWebdevelopmentRouteImport } from './routes/services/webdevelopment'
+import { Route as ServicesWebdesignRouteImport } from './routes/services/webdesign'
 import { Route as ServicesUiuxdesignRouteImport } from './routes/services/uiuxdesign'
 import { Route as ServicesSeooptimizationRouteImport } from './routes/services/seooptimization'
+import { Route as ServicesImportanceofwebmaintenanceRouteImport } from './routes/services/importanceofwebmaintenance'
+import { Route as ServicesImportanceofwebdevelopmentRouteImport } from './routes/services/importanceofwebdevelopment'
+import { Route as ServicesImportanceofwebdesignRouteImport } from './routes/services/importanceofwebdesign'
 import { Route as ServicesEcommercesolutionsRouteImport } from './routes/services/ecommercesolutions'
 
 const StackRoute = StackRouteImport.update({
@@ -61,6 +70,39 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesWhatiswebmaintenanceRoute =
+  ServicesWhatiswebmaintenanceRouteImport.update({
+    id: '/whatiswebmaintenance',
+    path: '/whatiswebmaintenance',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesWhatiswebdevelopmentRoute =
+  ServicesWhatiswebdevelopmentRouteImport.update({
+    id: '/whatiswebdevelopment',
+    path: '/whatiswebdevelopment',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesWhatiswebdesignRoute = ServicesWhatiswebdesignRouteImport.update({
+  id: '/whatiswebdesign',
+  path: '/whatiswebdesign',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesWebsitemaintenanceRoute =
+  ServicesWebsitemaintenanceRouteImport.update({
+    id: '/websitemaintenance',
+    path: '/websitemaintenance',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesWebdevelopmentRoute = ServicesWebdevelopmentRouteImport.update({
+  id: '/webdevelopment',
+  path: '/webdevelopment',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesWebdesignRoute = ServicesWebdesignRouteImport.update({
+  id: '/webdesign',
+  path: '/webdesign',
+  getParentRoute: () => ServicesRoute,
+} as any)
 const ServicesUiuxdesignRoute = ServicesUiuxdesignRouteImport.update({
   id: '/uiuxdesign',
   path: '/uiuxdesign',
@@ -71,6 +113,24 @@ const ServicesSeooptimizationRoute = ServicesSeooptimizationRouteImport.update({
   path: '/seooptimization',
   getParentRoute: () => ServicesRoute,
 } as any)
+const ServicesImportanceofwebmaintenanceRoute =
+  ServicesImportanceofwebmaintenanceRouteImport.update({
+    id: '/importanceofwebmaintenance',
+    path: '/importanceofwebmaintenance',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesImportanceofwebdevelopmentRoute =
+  ServicesImportanceofwebdevelopmentRouteImport.update({
+    id: '/importanceofwebdevelopment',
+    path: '/importanceofwebdevelopment',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesImportanceofwebdesignRoute =
+  ServicesImportanceofwebdesignRouteImport.update({
+    id: '/importanceofwebdesign',
+    path: '/importanceofwebdesign',
+    getParentRoute: () => ServicesRoute,
+  } as any)
 const ServicesEcommercesolutionsRoute =
   ServicesEcommercesolutionsRouteImport.update({
     id: '/ecommercesolutions',
@@ -88,8 +148,17 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRouteWithChildren
   '/stack': typeof StackRoute
   '/services/ecommercesolutions': typeof ServicesEcommercesolutionsRoute
+  '/services/importanceofwebdesign': typeof ServicesImportanceofwebdesignRoute
+  '/services/importanceofwebdevelopment': typeof ServicesImportanceofwebdevelopmentRoute
+  '/services/importanceofwebmaintenance': typeof ServicesImportanceofwebmaintenanceRoute
   '/services/seooptimization': typeof ServicesSeooptimizationRoute
   '/services/uiuxdesign': typeof ServicesUiuxdesignRoute
+  '/services/webdesign': typeof ServicesWebdesignRoute
+  '/services/webdevelopment': typeof ServicesWebdevelopmentRoute
+  '/services/websitemaintenance': typeof ServicesWebsitemaintenanceRoute
+  '/services/whatiswebdesign': typeof ServicesWhatiswebdesignRoute
+  '/services/whatiswebdevelopment': typeof ServicesWhatiswebdevelopmentRoute
+  '/services/whatiswebmaintenance': typeof ServicesWhatiswebmaintenanceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -101,8 +170,17 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRouteWithChildren
   '/stack': typeof StackRoute
   '/services/ecommercesolutions': typeof ServicesEcommercesolutionsRoute
+  '/services/importanceofwebdesign': typeof ServicesImportanceofwebdesignRoute
+  '/services/importanceofwebdevelopment': typeof ServicesImportanceofwebdevelopmentRoute
+  '/services/importanceofwebmaintenance': typeof ServicesImportanceofwebmaintenanceRoute
   '/services/seooptimization': typeof ServicesSeooptimizationRoute
   '/services/uiuxdesign': typeof ServicesUiuxdesignRoute
+  '/services/webdesign': typeof ServicesWebdesignRoute
+  '/services/webdevelopment': typeof ServicesWebdevelopmentRoute
+  '/services/websitemaintenance': typeof ServicesWebsitemaintenanceRoute
+  '/services/whatiswebdesign': typeof ServicesWhatiswebdesignRoute
+  '/services/whatiswebdevelopment': typeof ServicesWhatiswebdevelopmentRoute
+  '/services/whatiswebmaintenance': typeof ServicesWhatiswebmaintenanceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -115,8 +193,17 @@ export interface FileRoutesById {
   '/services': typeof ServicesRouteWithChildren
   '/stack': typeof StackRoute
   '/services/ecommercesolutions': typeof ServicesEcommercesolutionsRoute
+  '/services/importanceofwebdesign': typeof ServicesImportanceofwebdesignRoute
+  '/services/importanceofwebdevelopment': typeof ServicesImportanceofwebdevelopmentRoute
+  '/services/importanceofwebmaintenance': typeof ServicesImportanceofwebmaintenanceRoute
   '/services/seooptimization': typeof ServicesSeooptimizationRoute
   '/services/uiuxdesign': typeof ServicesUiuxdesignRoute
+  '/services/webdesign': typeof ServicesWebdesignRoute
+  '/services/webdevelopment': typeof ServicesWebdevelopmentRoute
+  '/services/websitemaintenance': typeof ServicesWebsitemaintenanceRoute
+  '/services/whatiswebdesign': typeof ServicesWhatiswebdesignRoute
+  '/services/whatiswebdevelopment': typeof ServicesWhatiswebdevelopmentRoute
+  '/services/whatiswebmaintenance': typeof ServicesWhatiswebmaintenanceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -130,8 +217,17 @@ export interface FileRouteTypes {
     | '/services'
     | '/stack'
     | '/services/ecommercesolutions'
+    | '/services/importanceofwebdesign'
+    | '/services/importanceofwebdevelopment'
+    | '/services/importanceofwebmaintenance'
     | '/services/seooptimization'
     | '/services/uiuxdesign'
+    | '/services/webdesign'
+    | '/services/webdevelopment'
+    | '/services/websitemaintenance'
+    | '/services/whatiswebdesign'
+    | '/services/whatiswebdevelopment'
+    | '/services/whatiswebmaintenance'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -143,8 +239,17 @@ export interface FileRouteTypes {
     | '/services'
     | '/stack'
     | '/services/ecommercesolutions'
+    | '/services/importanceofwebdesign'
+    | '/services/importanceofwebdevelopment'
+    | '/services/importanceofwebmaintenance'
     | '/services/seooptimization'
     | '/services/uiuxdesign'
+    | '/services/webdesign'
+    | '/services/webdevelopment'
+    | '/services/websitemaintenance'
+    | '/services/whatiswebdesign'
+    | '/services/whatiswebdevelopment'
+    | '/services/whatiswebmaintenance'
   id:
     | '__root__'
     | '/'
@@ -156,8 +261,17 @@ export interface FileRouteTypes {
     | '/services'
     | '/stack'
     | '/services/ecommercesolutions'
+    | '/services/importanceofwebdesign'
+    | '/services/importanceofwebdevelopment'
+    | '/services/importanceofwebmaintenance'
     | '/services/seooptimization'
     | '/services/uiuxdesign'
+    | '/services/webdesign'
+    | '/services/webdevelopment'
+    | '/services/websitemaintenance'
+    | '/services/whatiswebdesign'
+    | '/services/whatiswebdevelopment'
+    | '/services/whatiswebmaintenance'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -229,6 +343,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/whatiswebmaintenance': {
+      id: '/services/whatiswebmaintenance'
+      path: '/whatiswebmaintenance'
+      fullPath: '/services/whatiswebmaintenance'
+      preLoaderRoute: typeof ServicesWhatiswebmaintenanceRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/whatiswebdevelopment': {
+      id: '/services/whatiswebdevelopment'
+      path: '/whatiswebdevelopment'
+      fullPath: '/services/whatiswebdevelopment'
+      preLoaderRoute: typeof ServicesWhatiswebdevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/whatiswebdesign': {
+      id: '/services/whatiswebdesign'
+      path: '/whatiswebdesign'
+      fullPath: '/services/whatiswebdesign'
+      preLoaderRoute: typeof ServicesWhatiswebdesignRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/websitemaintenance': {
+      id: '/services/websitemaintenance'
+      path: '/websitemaintenance'
+      fullPath: '/services/websitemaintenance'
+      preLoaderRoute: typeof ServicesWebsitemaintenanceRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/webdevelopment': {
+      id: '/services/webdevelopment'
+      path: '/webdevelopment'
+      fullPath: '/services/webdevelopment'
+      preLoaderRoute: typeof ServicesWebdevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/webdesign': {
+      id: '/services/webdesign'
+      path: '/webdesign'
+      fullPath: '/services/webdesign'
+      preLoaderRoute: typeof ServicesWebdesignRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/uiuxdesign': {
       id: '/services/uiuxdesign'
       path: '/uiuxdesign'
@@ -243,6 +399,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesSeooptimizationRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/services/importanceofwebmaintenance': {
+      id: '/services/importanceofwebmaintenance'
+      path: '/importanceofwebmaintenance'
+      fullPath: '/services/importanceofwebmaintenance'
+      preLoaderRoute: typeof ServicesImportanceofwebmaintenanceRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/importanceofwebdevelopment': {
+      id: '/services/importanceofwebdevelopment'
+      path: '/importanceofwebdevelopment'
+      fullPath: '/services/importanceofwebdevelopment'
+      preLoaderRoute: typeof ServicesImportanceofwebdevelopmentRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/importanceofwebdesign': {
+      id: '/services/importanceofwebdesign'
+      path: '/importanceofwebdesign'
+      fullPath: '/services/importanceofwebdesign'
+      preLoaderRoute: typeof ServicesImportanceofwebdesignRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/ecommercesolutions': {
       id: '/services/ecommercesolutions'
       path: '/ecommercesolutions'
@@ -255,14 +432,34 @@ declare module '@tanstack/react-router' {
 
 interface ServicesRouteChildren {
   ServicesEcommercesolutionsRoute: typeof ServicesEcommercesolutionsRoute
+  ServicesImportanceofwebdesignRoute: typeof ServicesImportanceofwebdesignRoute
+  ServicesImportanceofwebdevelopmentRoute: typeof ServicesImportanceofwebdevelopmentRoute
+  ServicesImportanceofwebmaintenanceRoute: typeof ServicesImportanceofwebmaintenanceRoute
   ServicesSeooptimizationRoute: typeof ServicesSeooptimizationRoute
   ServicesUiuxdesignRoute: typeof ServicesUiuxdesignRoute
+  ServicesWebdesignRoute: typeof ServicesWebdesignRoute
+  ServicesWebdevelopmentRoute: typeof ServicesWebdevelopmentRoute
+  ServicesWebsitemaintenanceRoute: typeof ServicesWebsitemaintenanceRoute
+  ServicesWhatiswebdesignRoute: typeof ServicesWhatiswebdesignRoute
+  ServicesWhatiswebdevelopmentRoute: typeof ServicesWhatiswebdevelopmentRoute
+  ServicesWhatiswebmaintenanceRoute: typeof ServicesWhatiswebmaintenanceRoute
 }
 
 const ServicesRouteChildren: ServicesRouteChildren = {
   ServicesEcommercesolutionsRoute: ServicesEcommercesolutionsRoute,
+  ServicesImportanceofwebdesignRoute: ServicesImportanceofwebdesignRoute,
+  ServicesImportanceofwebdevelopmentRoute:
+    ServicesImportanceofwebdevelopmentRoute,
+  ServicesImportanceofwebmaintenanceRoute:
+    ServicesImportanceofwebmaintenanceRoute,
   ServicesSeooptimizationRoute: ServicesSeooptimizationRoute,
   ServicesUiuxdesignRoute: ServicesUiuxdesignRoute,
+  ServicesWebdesignRoute: ServicesWebdesignRoute,
+  ServicesWebdevelopmentRoute: ServicesWebdevelopmentRoute,
+  ServicesWebsitemaintenanceRoute: ServicesWebsitemaintenanceRoute,
+  ServicesWhatiswebdesignRoute: ServicesWhatiswebdesignRoute,
+  ServicesWhatiswebdevelopmentRoute: ServicesWhatiswebdevelopmentRoute,
+  ServicesWhatiswebmaintenanceRoute: ServicesWhatiswebmaintenanceRoute,
 }
 
 const ServicesRouteWithChildren = ServicesRoute._addFileChildren(

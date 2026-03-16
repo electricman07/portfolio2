@@ -1,7 +1,9 @@
-import React from "react";
+import { createFileRoute } from "@tanstack/react-router";
 
-const whatiswebmaintenance = () => {
-  return <div>whatiswebmaintenance</div>;
-};
+export const Route = createFileRoute("/services/whatiswebmaintenance")({
+  component: RouteComponent,
+});
 
-export default whatiswebmaintenance;
+function RouteComponent() {
+  return <div>Hello "/services/ecommercesolutions"!</div>;
+}
