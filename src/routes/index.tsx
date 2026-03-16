@@ -19,14 +19,14 @@ function App() {
           </div>
         </div>
 
-        <div className="title-container flex flex-col justify-center items-center w-[80%] h-[15%] lg:w-[50%] lg:h-[25%] rounded-xl gap-10 text-(--text-primary) ">
-          <div className="title flex justify-center">
+        <div className="title-container flex flex-col justify-center items-center w-[80%] h-[15%] lg:w-[50%] lg:h-[25%] rounded-xl gap-10 text-(--bg-primary) ">
+          <div className="title flex justify-center text-(--bg-primary)">
             <span className="title-span mr-2.5">I am </span>
             <h2 className="main-title text-2xl md:text-3xl lg:text-5xl m-0 italic tracking-wide font-[grandstander]">
               Glen Popowich
             </h2>
           </div>
-          <h3 className="sub-title text-[0.75rem] md:text-xl lg:text-3xl m-0 lg:mt-1.5">
+          <h3 className="sub-title text-[0.75rem] md:text-xl lg:text-3xl m-0 lg:mt-1.5 text-(--bg-primary)">
             Web Designer / Developer
           </h3>
         </div>
