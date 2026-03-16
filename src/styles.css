@@ -304,7 +304,7 @@ nav.active {
   }
 
   .nav-links {
-    visibility: hidden;
+    display: none;
     position: fixed;
     right: -110%;
     top: -2%;
@@ -319,7 +319,7 @@ nav.active {
 
   .nav-links.active {
     right: 0;
-    visibility: visible;
+    display: flex;
   }
 }
 
