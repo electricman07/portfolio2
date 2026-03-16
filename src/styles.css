@@ -28,7 +28,7 @@
   --text-primary: #e8f3f0;
   --text-secondary: #b8d9d4;
   --text-light: #7fa9a4;
-  --accent-primary: #5fbfa8;
+  --accent-primary: #d28590;
   --accent-secondary: #376494;
   --accent-hover: #7bd4c4;
   --bg-primary: #513d45;
@@ -42,7 +42,7 @@
     --text-primary: #e8f3f0;
     --text-secondary: #b8d9d4;
     --text-light: #7fa9a4;
-    --accent-primary: #5fbfa8;
+    --accent-primary: #d28590;
     --accent-secondary: #376494;
     --accent-hover: #7bd4c4;
     --bg-primary: #513d45;
@@ -325,7 +325,7 @@ nav.active {
 
 /* Sections  */
 .section-title {
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--bg-transparent);
   color: var(--bg-primary);
 }
 
