@@ -13,7 +13,7 @@ function App() {
           <div className="image-src h-50 w-50 md:h-75 md:w-75 rounded-[50%] mt-10 sm:mr-10">
             <img
               className="md:ml-12 md:mt-12"
-              src="/public/images/Avatar200.png"
+              src="/images/Avatar200.png"
               alt=""
             />
           </div>
