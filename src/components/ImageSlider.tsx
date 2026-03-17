@@ -1,44 +1,21 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import "./ImageSlider.css"; // Create this file for custom styles
+import "./ImageSlider.css"; // Create this file for custom styles
 
 const ImageSlider = ({ images }: { images: string[] }) => {
   const settings = {
     className: "center",
-    centerMode: true,
-    dots: true,
-    infinite: true,
+    centerMode: false,
     centerPadding: "60px",
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     speed: 500,
-    slidesToShow: 3,
     autoplay: true,
     autoplaySpeed: 5000,
     cssEase: "linear",
     adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
   };
 
   return (
