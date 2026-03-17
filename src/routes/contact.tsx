@@ -57,19 +57,19 @@ const RouteComponent: React.FC = () => {
   };
 
   return (
-    <div className=" sections flex flex-col items-center m-2.5 md:m-20 rounded-xl h-full">
+    <div className=" sections flex flex-col items-center justify-center m-2.5 md:m-20 rounded-xl h-full">
       <h2 className=" section-title p-2.5 w-auto text-center rounded-xl mt-5  text-2xl md:text-5xl">
         Contact Me
       </h2>
-      <p className="mt-5 bg-(--accent-secondary) rounded-xl w-80 p-5 shadow-(--box-shadow)">
+      <p className="mt-5 bg-(--accent-secondary) rounded-xl w-80 md:w-[80%] p-5 shadow-(--box-shadow)">
         Whether you have a question about my services, want to discuss a
         potential project, or just want to say hello, I'm here to help. Feel
         free to reach out using the contact form below or through any of the
         provided contact information. I look forward to connecting with you!
       </p>
 
-      <div className="flex flex-col w-80 lg:flex-row mt-10 md:m-2.5 rounded-xl shadow-(--box-shadow)">
-        <div className=" min-w-80 md:min-w-lg bg-(--accent-secondary)  rounded-t-xl lg:rounded-bl-xl lg:rounded-tl-xl p-2.5 md:p-10 text-(--text-primary)">
+      <div className="flex flex-col w-80 lg:w-auto lg:flex-row lg:justify-center mt-10  rounded-xl shadow-(--box-shadow)">
+        <div className=" min-w-80 md:min-w-lg bg-(--accent-secondary)  rounded-t-xl lg:rounded-t-none lg:rounded-bl-xl lg:rounded-tl-xl p-2.5 md:p-10 text-(--text-primary)">
           <div>
             <h3 className="text-center py-10 md:p-10 text-2xl md:text-4xl">
               Contact Details
@@ -156,9 +156,9 @@ const RouteComponent: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className=" w-80 md:w-[500px} h-4/5 md:h-full">
+        <div className=" w-80 md:min-w-lg h-4/5 md:h-full">
           <form
-            className="md:min-w-lg md:max-w-2xl md:mx-auto p-6 bg-(--bg-primary) shadow-lg rounded-b-xl md:rounded-r-xl space-y-4"
+            className="md:min-w-lg md:max-w-2xl md:mx-auto p-6 bg-(--bg-primary) shadow-lg rounded-b-xl lg:rounded-b-none  lg:rounded-r-xl lg:rounded-br-xl space-y-4"
             onSubmit={handleSubmit(onSubmit)}
             style={{
               maxWidth: "400px",
