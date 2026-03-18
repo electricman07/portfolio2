@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./ImageSlider.css"; // Create this file for custom styles
+// import "./ImageSlider.css"; // Create this file for custom styles
 
 const ImageSlider = ({ images }: { images: string[] }) => {
   const settings = {
@@ -19,11 +19,15 @@ const ImageSlider = ({ images }: { images: string[] }) => {
   };
 
   return (
-    <div className="image-slider">
+    <div className="image-slider w-[80%] m-auto text-center">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Slide ${index}`} />
+            <img
+              className="max-w-full h-auto m-auto"
+              src={image}
+              alt={`Slide ${index}`}
+            />
           </div>
         ))}
       </Slider>
