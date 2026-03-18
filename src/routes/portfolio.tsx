@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import ImageSlider from "#/components/ImageSlider";
-import Rylee from "../../public/images/websites/rylee.png";
-import Rylee2 from "../../public/images/websites/Rylee2.png";
+import Rylee from "/images/websites/rylee.png";
+import Rylee2 from "/images/websites/Rylee2.png";
 
 export const Route = createFileRoute("/portfolio")({
   component: RouteComponent,
